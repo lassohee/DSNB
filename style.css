@@ -38,9 +38,22 @@ nav {
 	font-family: 'Righteous', cursive;
 }
 
-.btn {
+.btn0 {
 	background-color: #eaeaea;
 	color: #000000;
+	text-decoration: none;
+	padding: 5px 20px;
+	margin-left: 5px;
+	border: 1.5px solid #000000;
+	border-radius: 30px;
+	font-size: 13px;
+	font-weight:300;
+	transition: transform .4s;
+}
+
+.btn1 {
+	background-color: #000000;
+	color: #ffffff;
 	text-decoration: none;
 	padding: 5px 20px;
 	margin-left: 5px;
@@ -107,11 +120,12 @@ section {
 	color: #000000;
 	text-decoration: none;
 	border: 1px solid #eaeaea;
-	width: 160px;
-	height: 40px;
+	width: 170px;
+	height: 45px;
 	border-radius: 30px;
 	font-size: 15px;
 	cursor: pointer;
+
 }
 
 
@@ -119,16 +133,17 @@ section {
 	background-color: white;
 	width: 75%;
 	margin: auto;
-	border-radius: 25px;
 	margin-top: 20px;
+	border-radius: 25px;
 }
 
 
 
-.main_textbox {
+.service .main_textbox {
 	font-size: 24px;
 	background-color: #ffffff;
-	margin-top: 35px;
+	margin-top: 30px;
+	margin-bottom: 40px;
 }
 
 .main_textbox p {
@@ -142,11 +157,16 @@ section {
 	background-color: #ffffff;
 }
 
+.orange_box {
+	width: 130px;
+	height: 100%;
+	background-color: #ff8523;
+}
 
 .pic-content {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 2rem;
+	gap: 3rem;
 	align-items: center;
 	margin-top: 2rem;
 	cursor: pointer;
@@ -162,13 +182,10 @@ section {
 }
 
 .row {
-	transition: all .38s ease;
 	background-color: #ffffff;
 }
 
-.row:hover {
-	transform: scale(1.02);
-}
+
 
 .pic-text1 {
 	padding: 8px 0 5px 0;
@@ -186,12 +203,14 @@ section {
 }
 
 
+.search_content {
 
+}
 
 
 #search {
 	display: inline-block;
-	width: 50%;
+	width: 35%;
 	padding: 7px 15px 7px 15px;
 	border: 2px solid;
 	outline: none;
@@ -239,19 +258,39 @@ section {
 	text-align: center;
 }
 
+.image_slider {
+	display: block;
+	width: 100%;
+	overflow-x: scroll;
+	padding: 10px;
+	box-sizing: border-box;
+	padding-top: 50px;
+	margin: auto;
+}
+
+.horizontal_slider::-webkit-scrollbar {
+	display: none;
+}
+
 .image_container {
- 	display: flex;
- 	width: 75%;
- 	padding: 10px;
- 	padding-top: 50px;
- 	align-items: center;
- 	margin: auto;
+ 	display: block;
+ 	white-space: nowrap;
 
 }
 
-.image_container img {
+
+.item {
+	display: inline-block;
+	margin-right: 1px;
+}
+
+.item img {
 	height: 200px;
-	padding: 10px;
+}
+
+
+.blank {
+	height: 100px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -316,23 +355,8 @@ section {
 	gap: 2rem;
 	}
 
-	.service {
-	background-color: white;
-	width: 75%;
-	margin: auto;
-	border-radius: 25px;
-	
-}
 
-	.pic-content {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	gap: 2rem;
-	align-items: center;
-	margin-top: 2rem;
-	cursor: pointer;
-	
-	}
+
 
 	.row .pic-text1 {
 	padding: 8px 0 5px 0;
@@ -360,18 +384,19 @@ section {
 
 	.service {
 	background-color: white;
-	width: 90%;
+	width: 100%;
+	height: 700px;
 	margin: auto;
-	margin-top: 100px;
-	border-radius: 20px;
+	border-radius: 0px;
 }
 
 
 
-.main_textbox {
+.service .main_textbox {
 	font-size: 18px;
 	background-color: #ffffff;
-	margin-top: 35px;
+	margin-top: 30px;
+	margin-bottom: 50px;
 }
 
 .main_textbox p {
@@ -389,7 +414,7 @@ section {
 .pic-content {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 2rem;
+	gap: 1.5rem;
 	align-items: center;
 	margin-top: 2rem;
 	cursor: pointer;
@@ -409,13 +434,10 @@ section {
 	background-color: #ffffff;
 }
 
-.row:hover {
-	transform: scale(1.02);
-}
 
-.pic-text1 {
-	padding: 8px 0 5px 0;
-	font-size: 18px;
+.service .pic-text1 {
+	padding: 2px 0 3px 0;
+	font-size: 16px;
 	font-family: 'Noto Sans KR', sans-serif;
 	background-color: #ffffff;
 }
@@ -429,12 +451,14 @@ section {
 }
 
 
-
+.search_content {
+	height: 50px;
+}
 
 
 #search {
 	display: inline-block;
-	width: 70%;
+	width: 60%;
 	padding: 7px 15px 7px 15px;
 	border: 2px solid;
 	outline: none;
@@ -469,14 +493,47 @@ section {
 	color: #ff8523;
 	font-weight: bold;
 }
+
+.image_slider {
+	display: block;
+	width: 100%;
+	overflow-x: scroll;
+	padding: 10px;
+	box-sizing: border-box;
+	padding-top: 50px;
+	margin: auto;
+}
+
+.horizontal_slider::-webkit-scrollbar {
+	display: none;
+}
+
+.image_container {
+ 	display: block;
+ 	white-space: nowrap;
+
+}
+
+
+.item {
+	display: inline-block;
+	margin-right: 1px;
+}
+
+.item img {
+	height: 200px;
+}
+
+.blank {
+	height: 100px;
+}
+
 }
 
 
 
 	
 	
-
-
 
 
 
